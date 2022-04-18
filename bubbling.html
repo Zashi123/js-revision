@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header{
+            background-color: green;
+            padding: 20px;
+        }
+.container{
+    background-color: red;
+}
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="container">
+           <button id="signin">Sign IN</button>
+           <button  id="signup">Sign up</button>
+        </div>
+    </header>
+</body>
+<script>
+    // selector
+    let header=document.querySelector('header')
+    let con=document.querySelector('.container')
+    let signin=document.querySelector('#signin')
+    let signup=document.querySelector('#signup')
+    // event handlers
+    signin.addEventListener('click',function(e){
+        e.stopPropagation()
+
+
+        alert('sign in button')
+    })
+    signup.addEventListener('click',function(e){
+        e.stopPropagation()
+
+
+        alert('sign up button')
+})
+header.addEventListener('click',function(e){
+    e.stopPropagation()
+
+
+alert('header file')
+})
+con.addEventListener('click',function(e){
+    e.stopPropagation()
+
+
+alert('container file')
+})
+
+
+
+</script>
+</html>

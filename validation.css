@@ -1,0 +1,30 @@
+*{
+    box-sizing: border-box;
+}
+    form{
+        width: 50%;
+        margin: auto;
+        background-color: yellow;
+        padding: 20px;
+    }
+    form input{
+        width: 100%;
+        padding: 20px;
+        border-radius: 10px;
+        outline: none;
+    }
+    #submit{
+        background-color: black;
+        color: white;
+        font-size: 30px;
+        
+    }
+    #sect{
+        background-color: green;
+        border: 2px solid grey;
+    }
+    #sect div{
+        border: 2px solid red;
+        margin: 20px;
+        padding: 20px; 
+    }

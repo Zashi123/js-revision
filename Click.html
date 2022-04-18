@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form{
+            background-color: red;
+            padding: 20px;
+            display: none;
+
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">Changecolor</button>
+    <button id="click">Clik me</button>
+    <button id="bodycolor">change Body color</button>
+    <button id="Signup">Signup</button> 
+    <form>
+        <h1>fill the form</h1>
+    <input type="text" placeholder="enter name">
+    <input type="number" placeholder="enter phonenumber">
+    </form>
+
+
+    <p>ahmed</p>
+    <input type="number"  id="number1" value="">
+    <input type="number" id="number2" value="">
+    <button id="add">+</button>
+    <input type="number" id="total" >
+   
+
+        
+</body>
+<script>
+    //clik
+    document.querySelector('#btn').addEventListener('click',function(){
+        document.querySelector('#btn').style.background='red'
+    })
+    document.querySelector('#click').addEventListener('mouseover',function(){
+        document.querySelector('#click').innerHTML='add me'
+    })
+    let changebg=document.querySelector('#bodycolor')
+    changebg.addEventListener('click',function(){
+        document.querySelector('body').style.background='green'
+        document.querySelector('p').style.fontSize='100px'
+    })
+//adding 2 numbers
+let no1=document.querySelector('#number1')
+let no2=document.querySelector('#number2')
+let addition=document.querySelector('#add')
+let sum=document.querySelector('#total')
+//eventhandler
+addition.addEventListener('click',Addingnumbers)
+function  Addingnumbers(){
+let numberOne=no1.value
+let numberTwo=no2.value
+let sumation=parseInt(numberOne) + parseInt(numberTwo)
+sum.value=sumation
+
+
+}
+
+//form signing
+let sign=document.querySelector('#Signup')
+let forminput=document.querySelector('form')
+sign.addEventListener('click',function(){
+    forminput.style.display='block'
+})
+</script>
+</html>

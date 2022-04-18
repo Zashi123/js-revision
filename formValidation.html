@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+        form{
+            width: 50%;
+            margin: auto;
+            background-color: yellow;
+            padding: 20px;
+        }
+        form input{
+            width: 100%;
+            padding: 20px;
+            border-radius: 10px;
+            outline: none;
+        }
+        #submit{
+            background-color: black;
+            color: white;
+            font-size: 30px;
+            
+        }
+        #sect{
+            background-color: green;
+            border: 2px solid grey;
+        }
+        #sect div{
+            border: 2px solid red;
+            margin: 20px;
+            padding: 20px;
+
+        }
+       
+       
+    </style>
+</head>
+<body>
+   
+    <form >
+        <h1>Fill this form</h1>
+        
+            <input type="text" placeholder="Enter name" id="name" value="AHMED"><br><br>
+            <input type="number" placeholder="Enter number" id="phone"><br><br>
+            <input type="password" placeholder="Enter password" id="password"><br><br>
+            <input type="password" placeholder="Enter password again" id="confirmPassword"><br><br>
+            <input type="submit" id="submit">
+           
+       
+    </form>
+    <section id="sect">
+        <!-- <div>
+            <p>${name}</p>
+             <p>${teleefan}</p>
+            <p>${sir}</p>
+            <p>${xaqiijin}</p>
+            <button>Delete</button>
+            </div> -->
+     </section>
+</body>
+<script>
+let form=document.querySelector('form')
+let magac=document.querySelector('#name')
+let phone=document.querySelector('#phone')
+let password=document.querySelector('#password')
+let confirmPassword=document.querySelector('#confirmPassword')
+let submit=document.querySelector('#submit')
+let section=document.querySelector('#sect')
+
+
+
+form.addEventListener('submit',function(e){
+    e.preventDefault()
+    let name=magac.value//let name="AHMED"
+    let teleefan=phone.value//let taleefan="777"
+    let sir=password.value//87
+    let xaqiijin=confirmPassword.value//87
+    
+
+    // let kasoco=btn.value
+    
+
+     //form validation
+     if(name=='' ){
+            alert('your left an empty place')
+        }
+        else if(teleefan==''){
+            alert('you left the phone number embty')
+        }
+        else if(sir==''){
+            alert('you left the password embty')
+        }
+        else if(xaqiijin==''){
+            alert('you left the confirm password  embty')
+        }
+        else if(sir!=xaqiijin){
+            alert('password doesnt match')
+        }
+        else{
+
+   
+    section.innerHTML +=`   
+    <div>
+    <p>${name}</p>
+     <p>${teleefan}</p>
+    <p>${sir}</p>
+    <p>${xaqiijin}</p>
+    <button class="dlt">Delete</buton>
+    
+    </div>
+    
+   
+        `
+       
+
+        magac.value=''
+        phone.value=''
+        password.value=''
+        confirmPassword.value=''
+    //     let button=document.createElement("button")
+    // button.innerHTML="hello"
+    // section.appendChild(button)
+            
+        }
+  
+    // btn.style.display="block"
+       
+     
+
+        // alert('yeeeees')
+
+})
+// let target=e.target
+//     if(target.classList.contains("btn"))
+//     target.parentNode.remove()
+
+
+//deeting form data
+section.addEventListener('click',function(z){
+    // section.innerHTML=''
+    let target=z.target
+    if(target.classList.contains("dlt"))
+    target.parentNode.remove()
+
+})
+</script>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        form{
+            width: 50%;
+            /* margin: auto; */
+            margin-left: 25%;
+            height: 300px;
+            background-color: aqua;
+        }
+        input{
+            width: 100%;
+            padding: 15px;
+        }
+        #add{
+            margin-top: 20px;
+        }
+        .firstinput{
+            margin-bottom: 15px;
+        }
+        .input_type{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+    <div class="container">
+         <input type="text" class="firstinput">
+         <!-- input type="text" class="input_type" -->
+     </div>
+    <div class="qadar">
+       
+        <button id="add">Add</button> 
+        <!-- <button>submit</button> -->
+        
+    </div>
+
+    </form>
+
+</body>
+<script>
+    let nasteho=document.querySelector('.container')
+    let btn=document.querySelector('#add')
+    let hamaza=document.querySelector("qadar")
+ 
+const addnewinput=(e)=>{
+    e.preventDefault()
+
+   //creating new elements using js
+    
+        //  < input type="text" class="input_type" >
+        let newinput=document.createElement('input')
+    newinput.type="text"
+newinput.className="input_type"
+// newinput.placeholder="enter quality of the product"
+nasteho.appendChild(newinput)
+
+//exercise
+let hamza=document.querySelector('.qadar')
+let newbutton=document.createElement("button")
+newbutton.type="submit",
+newbutton.className="summit"
+newbutton.innerHTML="submit"
+hamza.appendChild(newbutton)
+}
+btn.addEventListener('click',addnewinput)
+
+
+
+
+</script>
+</html> 

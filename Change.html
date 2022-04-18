@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .inputcolor{
+            background-color: black;
+        }
+        .dod{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <H1>NAME</H1><br>
+        <input type="text" id="input_type">
+        <p>password</p><span></span><br>
+        <input type="password" id="pass">
+        <select id="SelectOPtion">
+            <option>Select country</option>
+
+            <option>Somalia</option>
+            <option>Kenya</option>
+            <option>Tanzania</option>
+
+        </select>
+        <p></p>
+        <div></div>
+        <div class="dod">password should contain<br> 8 cracters and symbols</div>
+
+    </form>
+    
+</body>
+<script>
+    //chahnge
+    let input=document.querySelector('#input_type')
+    let pswd=document.querySelector('#pass')
+    let SelectOPtion=document.querySelector('#SelectOPtion')
+    let paragraph=document.querySelector('p')
+    let div=document.querySelector('div')
+    SelectOPtion.addEventListener('change',function(){
+        paragraph.innerHTML=SelectOPtion.value
+        input.style.backgroundColor='red'
+
+    })
+    //focus and blur
+    input.addEventListener('focus',function(){
+        input.placeholder="Enter your name"
+        // input.style.backgroundColor='blue'
+        input.classList.add("inputcolor")
+    })
+    input.addEventListener('blur',function(){
+        input.placeholder='ahmed'
+        input.classList.remove("inputcolor")
+
+    })
+
+
+    let nop=document.querySelector('#pass')
+    let span=document.querySelector('span')
+    
+    nop.addEventListener('focus',function(){
+        span.innerHTML='inter 6 characters'
+    })
+    nop.addEventListener('blur',function(){
+        span.innerHTML=''
+    })
+    
+    
+
+</script>
+</html>
